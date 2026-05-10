@@ -10,9 +10,7 @@
 | Logistic Regression | 34.96% | Классический ML |
 | SVM (RBF) | 57.15% | Классический ML |
 | Random Forest | 58.21% | Классический ML |
-| CNN Baseline | 68.37% | Deep Learning |
-| CNN + Augmentation | 69.67% | Deep Learning |
-| **CNN v3 (BatchNorm + ReduceLROnPlateau)** | **70.73%** | **Deep Learning** |
+| **CNN v3 (BatchNorm + ReduceLROnPlateau)** | **63.90%** | **Deep Learning** |
 
 ## Датасет
 
@@ -40,14 +38,7 @@ Input (224×224×3)
 Оптимизатор: `Adam(lr=1e-3)` + `ReduceLROnPlateau(factor=0.3, patience=3)`  
 Loss: `SparseCategoricalCrossentropy`
 
-## Запуск
 
-```bash
-git clone https://github.com/username/garbage-classification
-cd garbage-classification
-pip install -r requirements.txt
-jupyter notebook garbage_classification_v3.ipynb
-```
 
 ## Структура проекта
 
@@ -55,7 +46,6 @@ jupyter notebook garbage_classification_v3.ipynb
 ├── garbage_classification_v3.ipynb   # основной ноутбук
 ├── garbage_cnn_v3.keras              # сохранённая модель
 ├── class_names.json                  # список классов
-├── requirements.txt
 └── README.md
 ```
 
@@ -75,7 +65,7 @@ jupyter notebook garbage_classification_v3.ipynb
 **Отсутствие класса "неизвестно".** Модель всегда возвращает один из 10 классов —
 даже если на входе объект вне этих категорий.
 
-**Платформенная зависимость аугментации.** На Apple Silicon (M1/M2/M3) с
+**Платформенная зависимость аугментации.** На Apple Silicon m1 с
 `tensorflow-metal` слои `RandomRotation`, `RandomZoom`, `RandomTranslation` без
 явного `fill_mode='reflect'` заполняют пустые пиксели константой вместо зеркального
 отражения — края заливаются чёрным или белым. Воспроизведено на TF 2.x + Metal plugin.
