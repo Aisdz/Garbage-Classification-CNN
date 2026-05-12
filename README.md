@@ -1,3 +1,7 @@
+![Python](https://img.shields.io/badge/Python-3.11-blue)
+![TensorFlow](https://img.shields.io/badge/TensorFlow-2.x-orange)
+![Keras](https://img.shields.io/badge/Keras-3.x-red)
+![scikit-learn](https://img.shields.io/badge/scikit--learn-1.x-green)
 # 🗑️ Garbage Classification
 
 Классификация мусора на 10 категорий с помощью кастомного CNN.  
