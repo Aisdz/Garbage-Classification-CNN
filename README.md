@@ -83,13 +83,13 @@ Loss: `SparseCategoricalCrossentropy`
 Текущая версия — **baseline**. В планах:
 
 - [ ] **Transfer Learning** — попробовать EfficientNetB0 / MobileNetV3 как backbone,
-      заморозить веса и дообучить только голову. Ожидаемый прирост: +10–15% к accuracy (Обновление: попробовал с EfficientNetB0, результат залил в репозиторий garbage-classifier)
+      заморозить веса и дообучить только голову. Ожидаемый прирост: +10–15% к accuracy (Обновление: попробовал с EfficientNetB0, результат залил в репозиторий garbage-classifier-2)
 - [ ] **Другие архитектуры CNN** — добавить residual connections (mini-ResNet),
       протестировать `SeparableConv2D` для снижения числа параметров
 - [ ] **Улучшенная аугментация** — попробовать CutMix, MixUp, GridDistortion
       из библиотеки `albumentations`
 - [ ] **Веб-интерфейс** — простое приложение на Gradio или Streamlit:
-      загрузить фото мусора → получить предсказанный класс и уверенность модели (Обновление: Сделал web app с Flask, репозиторий: garbage-classifier)
+      загрузить фото мусора → получить предсказанный класс и уверенность модели (Обновление: Сделал web app с Flask, репозиторий: garbage-classifier-2)
 - [ ] **Метрики** — добавить macro F1-score и per-class recall как основные метрики
       вместо accuracy
       
