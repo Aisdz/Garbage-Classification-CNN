@@ -47,8 +47,8 @@ Loss: `SparseCategoricalCrossentropy`
 ## Структура проекта
 
 ```
-├── garbage_classification_v3.ipynb   # основной ноутбук
-├── garbage_cnn_v3.keras              # сохранённая модель
+├── garbage_classification_last.ipynb   # основной ноутбук
+├── garbage_cnn_v3_6390.keras              # сохранённая модель
 ├── class_names.json                  # список классов
 └── README.md
 ```
