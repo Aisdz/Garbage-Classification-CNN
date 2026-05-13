@@ -3,7 +3,7 @@
 ![Keras](https://img.shields.io/badge/Keras-3.x-red)
 ![scikit-learn](https://img.shields.io/badge/scikit--learn-1.x-green)
 
-# 🗑️ Garbage Classification
+# 🗑️ Garbage classification
 
 Классификация мусора на 10 категорий с помощью кастомного CNN.  
 Проект находится в активной разработке - текущая версия является baseline.
@@ -15,7 +15,7 @@
 | Logistic Regression | 34.96% | Классический ML |
 | SVM (RBF) | 57.15% | Классический ML |
 | Random Forest | 58.21% | Классический ML |
-| **CNN v3 (BatchNorm + ReduceLROnPlateau)** | **63.90%** | **Deep Learning** |
+| **CNN v3 (BatchNorm + ReduceLROnPlateau)** | **63.90%** | **Deep learning** |
 
 ## Датасет
 
@@ -67,7 +67,7 @@ Loss: `SparseCategoricalCrossentropy`
 хорошее освещение, объект по центру, чистый фон. В реальных сценариях точность
 предсказуемо снизится.
 
-**Отсутствие класса "неизвестно".** Модель всегда возвращает один из 10 классов —
+**Отсутствие класса "неизвестно".** Модель всегда возвращает один из 10 классов -
 даже если на входе объект вне этих категорий.
 
 **Платформенная зависимость аугментации.** На Apple Silicon m1 с
@@ -80,17 +80,17 @@ Loss: `SparseCategoricalCrossentropy`
 
 ## Roadmap
 
-Текущая версия — **baseline**. В планах:
+Текущая версия - **baseline**. В планах:
 
-- [ ] **Transfer Learning** — попробовать EfficientNetB0 / MobileNetV3 как backbone,
+- [ ] **Transfer Learning** - попробовать EfficientNetB0 / MobileNetV3 как backbone,
       заморозить веса и дообучить только голову. Ожидаемый прирост: +10–15% к accuracy (Обновление: попробовал с EfficientNetB0, результат залил в репозиторий garbage-classifier-2)
-- [ ] **Другие архитектуры CNN** — добавить residual connections (mini-ResNet),
+- [ ] **Другие архитектуры CNN** - добавить residual connections (mini-ResNet),
       протестировать `SeparableConv2D` для снижения числа параметров
-- [ ] **Улучшенная аугментация** — попробовать CutMix, MixUp, GridDistortion
+- [ ] **Улучшенная аугментация** - попробовать CutMix, MixUp, GridDistortion
       из библиотеки `albumentations`
-- [ ] **Веб-интерфейс** — простое приложение на Gradio или Streamlit:
+- [ ] **Веб-интерфейс** - простое приложение на Gradio или Streamlit:
       загрузить фото мусора → получить предсказанный класс и уверенность модели (Обновление: Сделал web app с Flask, репозиторий: garbage-classifier-2)
-- [ ] **Метрики** — добавить macro F1-score и per-class recall как основные метрики
+- [ ] **Метрики** - добавить macro F1-score и per-class recall как основные метрики
       вместо accuracy
       
 ## Технологии
